@@ -1,0 +1,9 @@
+<script src="./node_modules/socket.io-client/dist/socket.io.js"></script>
+<script>
+  const socket = io('http://localhost:4000');
+
+  // Listen for the 'test' event from the server
+  socket.on('message', (message) => {
+    console.log('Received message from server:', message);
+  });
+</script>
